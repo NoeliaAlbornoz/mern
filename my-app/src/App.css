@@ -1,0 +1,124 @@
+body {
+    font-family: 'Lucida Sans';
+}
+
+#logo {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: 500px;
+    height: 150px;
+}
+
+.paragraph {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#arrow {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+#home {
+    width: 50px;
+    height: 50px;
+}
+
+.container-links {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 300px;
+    list-style: none;
+    margin-bottom: 80px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+nav {
+    border: solid #1C7D5C;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+.color-link, legend{
+    color: #1C7D5C;
+}
+
+legend {
+    margin-bottom: 50px;
+}
+
+legend, button {
+    margin-left: 70px;
+}
+
+input[type="text"] {
+    width: 33%;
+    margin-bottom: 15px;
+    padding: 18px 0;
+    border: 0;
+    border-bottom: 1px solid #1C7D5C;
+    font-size: 15px;
+  }
+
+label {
+    width: 1000px;
+}
+
+button {
+    margin-top: 30px;
+  }
+
+  .carousel {
+    margin:20px 0
+  }
+
+  .align-avatar {
+      margin-right: 40px;
+  }
+
+  .avatar {
+    width:35px;
+  }
+
+  fieldset {
+      margin-left: 500px;
+  }
+
+.letter-img {
+    margin-left: 285px;
+}
+
+.carousel-indicators li {
+    border-radius: 50%;
+    border-color: #1C7D5C;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.carousel-img {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1C7D5C;
+    width: 300px;
+    height: 200px;
+}
