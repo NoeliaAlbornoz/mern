@@ -2,7 +2,7 @@
 
 const City = require('../models/City');
 
-function getCity(id){
+function getCity(req, res){
     let cityId = req.params.cityId;
 
     City.findById(cityId, (err, city) => {
@@ -29,6 +29,7 @@ function saveCity(req, res){
   let city = new City();
     city.name = req.body.name
     city.country = req.body.country
+    city.itineraries = req.body.itineraries
 
     city.save((err, cityStored) => {
       if(err) return res.status(500).send({message: 'ERROR WHEN SAVING IN THE DATABASE ${err}'})

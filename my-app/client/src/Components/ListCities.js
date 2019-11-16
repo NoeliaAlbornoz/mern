@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getCities} from '../Redux/Actions/getCities';
 import IndividualCity from './IndividualCity';
 import Title from '../Components/Title';
+import PropTypes from 'prop-types';
 import Paragraph from '../Components/Paragraph';
 
 class ListCities extends React.Component {
@@ -51,6 +52,11 @@ class ListCities extends React.Component {
         )           
     }     
 }
+
+ListCities.propTypes = {
+    getCities: PropTypes.func.isRequired,
+    city: PropTypes.object.isRequired
+} 
 
 const mapStateToProps = (state) => ({
     cities: state.city.list

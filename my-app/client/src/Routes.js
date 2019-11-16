@@ -4,6 +4,7 @@ import Home from './Screen/Home';
 import Cities from './Screen/Cities';
 import Log from './Screen/Log';
 import CreateAccount from './Screen/CreateAccount';
+import Itineraries from './Screen/Itineraries';
 
 const Routes = () => {
     return (
@@ -12,6 +13,7 @@ const Routes = () => {
             <Route exact path='/cities' component={Cities}/>
             <Route exact path='/log' component={Log}/>
             <Route exact path='/create_account' component={CreateAccount}/>
+            <Route exact path='/itineraries/:cityId' component={Itineraries}/>
         </Switch>
     );
 }
