@@ -5,7 +5,7 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Itinerary from '../Components/Itinerary';
 
-function Itineraries() {
+function Itineraries(props) {
     return (
       <div>
         <header>
@@ -14,7 +14,7 @@ function Itineraries() {
         </header>
         <section>
           <div>
-            <Itinerary/>
+            <Itinerary cityId={props.match.params.cityId}/>
           </div>
         </section>
         <footer><Footer/></footer>

@@ -6,7 +6,7 @@ class IndividualCity extends React.Component {
         return(
             <div>
                 
-                <li><Link to={'/itineraries/' + this.props.city._id}>{this.props.city.name} - {this.props.city.country}</Link></li>
+                <li><Link to={`/itineraries/${this.props.city._id}`}>{this.props.city.name} - {this.props.city.country}</Link></li>
             </div>
         )
     }

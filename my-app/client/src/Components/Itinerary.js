@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class Itinerary extends React.Component {
 
     componentWillMount(){
-         this.props.getItineraries()
+         this.props.getItineraries(this.props.cityId)
     }
     
     render(){
