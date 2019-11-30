@@ -4,10 +4,20 @@ import {Route, Link, BrowserRouter as Router} from 'react-router-dom';
 class IndividualCity extends React.Component {
     render(){
         return(
-            <div>
+            <div className="card bg-light text-dark">
+                <div className="card-body">
                 
-                <li><Link to={`/itineraries/${this.props.city._id}`}>{this.props.city.name} - {this.props.city.country}</Link></li>
+                    <li>
+                        <h2 className="title-city">{this.props.city.name}</h2> - 
+                        <small><i>{this.props.city.country}</i></small> 
+                        <Link to={`/itineraries/${this.props.city._id}`}>
+                            <img src={require(`./img/Countries/${this.props.city.country}.jpg`)} className="img-thumbnail mx-auto d-block flag"/>
+                        </Link>
+                    </li>
+            
+                </div>
             </div>
+            
         )
     }
 }

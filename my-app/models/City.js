@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 
 const CitySchema = Schema({
     name: String,
-    country: String
+    country: String,
+    img: String
 });
 
 module.exports = mongoose.model('City', CitySchema);

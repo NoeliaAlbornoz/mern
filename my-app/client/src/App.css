@@ -51,7 +51,7 @@ nav {
     position: absolute;
 }
 
-.color-link, legend{
+.color-link, legend, .title-city{
     color: #1C7D5C;
 }
 
@@ -115,7 +115,7 @@ button {
     border: 1px solid black;
 }
 
-.carousel-img {
+.carousel-img, .flag{
     border-style: solid;
     border-width: 5px;
     border-color: #1C7D5C;
@@ -130,3 +130,75 @@ button {
 .search{
     margin-left: 510px;
 }
+
+li{
+    list-style: none;
+}
+
+.title-city{
+    font-size: 30px;
+}
+
+.user-pic{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1C7D5C;
+    width: 100px;
+    height: 100px;
+}
+
+.itinerary-item{
+    display: flex;
+    list-style: none;
+}
+
+.itinerary-item li{
+    margin-right: 60px;
+    margin-top: 30px;
+}
+
+h6{
+    color: #F77227;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.activity-pic{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1C7D5C;
+    width: 150px;
+    height: 100px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+
+.activity-title{
+    text-align: center;
+}
+
+.container {
+    position: relative;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Serif;
+    font-style: italic;
+    font-size: 60px;
+  }
+  
+  .city-image { 
+    margin-top: -10px;
+    margin-bottom: 40px;
+    width: 1100px;
+    height: 300px;
+    opacity: 0.4;
+  }
+
+  .view{
+      margin-bottom: 60px;
+  }

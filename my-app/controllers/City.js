@@ -29,7 +29,7 @@ function saveCity(req, res){
   let city = new City();
     city.name = req.body.name
     city.country = req.body.country
-    city.itineraries = req.body.itineraries
+    city.img = req.body.img
 
     city.save((err, cityStored) => {
       if(err) return res.status(500).send({message: 'ERROR WHEN SAVING IN THE DATABASE ${err}'})
