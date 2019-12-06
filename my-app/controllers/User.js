@@ -1,7 +1,7 @@
 'use strict'
 
 const User = require('../models/User');
-//const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 
 function getUser(req, res){
     let userId = req.params.userId;
@@ -27,19 +27,29 @@ function saveUser(req, res){
   console.log('POST /api/user');
   console.log(req.body);
 
-  //const hashedPassword = bcrypt.hashSync(req.body.userFormData.password, 10) 
+  if(
+     req.body.username == "" ||
+     req.body.password == "" ||
+     req.body.email == "" )  return res.send({message:"Please complete all the fields"});
 
-  let user = new User();
-    user.username = req.body.username
-    user.password = req.body.password
-    user.email = req.body.email
-    user.firstname = req.body.firstname
-    user.lastname = req.body.lastname
+     User.findOne({username: req.body.username}).then((user)=> {
+        if(user!==null) return res.send({message: "the username already exists"}) // if username exists, provide error
+          console.log(req.file)
+        })
+        
+        const hashedPassword = bcrypt.hashSync(req.body.password, 10) 
 
-    user.save((err, userStored) => {
-      if(err) return res.status(500).send({message: 'ERROR WHEN SAVING IN THE DATABASE ${err}'})
-      res.status(200).send({user: userStored})
-    });
+        let user = new User();
+          user.username = req.body.username
+          user.password = hashedPassword
+          user.email = req.body.email
+          user.firstname = req.body.firstname
+          user.lastname = req.body.lastname
+
+      user.save((err, userStored) => {
+        if(err) return res.status(500).send({message: 'ERROR WHEN SAVING IN THE DATABASE ${err}'})
+        res.status(200).send({user: userStored})
+      });
 }
 
 function updateUser(req, res){
