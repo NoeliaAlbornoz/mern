@@ -3,9 +3,8 @@
 const mongoose = require('mongoose');
 const app = require('./app')
 const port = process.env.PORT || 5000;
-const concurrently = require('concurrently');
 
-mongoose.connect("mongodb+srv://nga:123@cluster1-9xrei.mongodb.net/test?retryWrites=true&w=majority"
+  mongoose.connect("mongodb+srv://nga:123@cluster1-9xrei.mongodb.net/test?retryWrites=true&w=majority"
   ).then(res =>{
     console.log("CONNECTED TO THE DATABASE");
 
@@ -14,3 +13,10 @@ mongoose.connect("mongodb+srv://nga:123@cluster1-9xrei.mongodb.net/test?retryWri
     });
 
   }).catch(err => {"ERROR CONNECTING TO DATABASE"});
+
+  
+
+ 
+
+
+

@@ -6,7 +6,7 @@ import activityReducer from './activityReducer';
 const rootReducer = combineReducers({
     city: cityReducer,
     itinerary: itineraryReducer,
-    activity: activityReducer
+    activity: activityReducer,
 });
 
 export default rootReducer;

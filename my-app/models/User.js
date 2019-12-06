@@ -1,6 +1,12 @@
-'use strict'
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const UserSchema = new mongoose.Schema({
+    username: String,
+    password: String,
+    email: String,
+    firstname: String,
+    lastname: String
+});
 
-module.exports = mongoose.model();
+module.exports = mongoose.model('User', UserSchema);

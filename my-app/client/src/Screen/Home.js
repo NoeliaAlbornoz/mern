@@ -24,8 +24,8 @@ function Home() {
       <section>
         <div>
           <ul class="link-home"> 
-            <li><Link to="/log" className="color-link" >Log in</Link></li>
-            <li><Link to="/create_account" className="color-link" >Create Account</Link></li>
+            <li><Link to="/login" className="color-link" >Log in</Link></li>
+            <li><Link to="/createAccount" className="color-link" >Create Account</Link></li>
           </ul>
         </div>
       </section>

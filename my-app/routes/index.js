@@ -1,11 +1,10 @@
 'use strict'
 
 const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
 const cityControllers = require('../controllers/City');
 const itineraryControllers = require('../controllers/Itinerary');
 const activityControllers = require('../controllers/Activity');
+const userControllers = require ('../controllers/User');
 const api = express.Router();
 
 api.post('/city', cityControllers.saveCity);
@@ -27,5 +26,11 @@ api.get('/activities/all', activityControllers.getActivities);
 api.get('/activities/:itineraryId', activityControllers.getActivitiesByItinerary);
 api.put('/activity/:activityId', activityControllers.updateActivity);
 api.delete('/activity/:activityId', activityControllers.deleteActivity);
+
+api.post('/user', userControllers.saveUser);
+api.get('/user/:userId', userControllers.getUser);
+api.get('/users/all', userControllers.getUsers);
+api.put('/user/:userId', userControllers.updateUser);
+api.delete('/user/:userId', userControllers.deleteUser);
 
 module.exports = api;

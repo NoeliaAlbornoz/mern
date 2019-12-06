@@ -3,9 +3,8 @@ import Header from '../Components/Header';
 import Nav from '../Components/Nav';
 import Title from '../Components/Title';
 import Paragraph from '../Components/Paragraph';
-import Input from '../Components/Input';
-import Button from '../Components/Button';
 import Footer from '../Components/Footer';
+import AccountForm from '../Components/AccountForm';
 
 class CreateAccount extends React.Component {
     render(){
@@ -18,24 +17,16 @@ class CreateAccount extends React.Component {
       </header>
       <section>
         <div>       
-            <Title mytitle="Create Account"/> 
+          <Title mytitle="Create Account"/> 
           <Paragraph mytext= "Register with your username and password."/>
         </div>
       </section>
       <section>
-      <div className="jumbotron">
-                <form>
-                    <fieldset>
-                        <legend><strong>User</strong></legend>
-                        <Input title="Name"/>
-                        <Input title="Password"/>
-                        <Input title="Confirm Password"/>
-                        <Input title="Mail"/>
-                        <Button button="Register"/>
-                    </fieldset>
-                </form>
-            
-            </div>
+        <div className="jumbotron">
+                
+          <AccountForm/>   
+                
+        </div>
       </section>
       <footer><Footer/></footer>
     </div>
