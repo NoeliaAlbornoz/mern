@@ -8,6 +8,8 @@ const userControllers = require ('../controllers/User');
 const api = express.Router();
 const jwt = require("jsonwebtoken");
 const key = require("../server");
+const passport = require('../passport')
+const User = require('../models/User');
 
 api.post('/city', cityControllers.saveCity);
 api.get('/city/:cityId', cityControllers.getCity);
@@ -36,4 +38,16 @@ api.put('/user/:userId', userControllers.updateUser);
 api.delete('/user/:userId', userControllers.deleteUser);
 api.post('/user/login', userControllers.loginUser);
 
+api.get(
+    "/test",
+    passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+      User
+        .findOne({ _id: req.user.id })
+        .then(user => {
+          res.json(user);
+        })
+        .catch(err => res.status(404).json({ error: "User does not exist!" }));
+    }
+  );
 module.exports = api;

@@ -2,9 +2,8 @@
 
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
-const key = require('../server');
 const jwt = require("jsonwebtoken");
-const secretOrKey = "secret";
+const key = require("../config/config")
 
 function getUser(req, res){
     let userId = req.params.userId;
@@ -94,7 +93,7 @@ function loginUser(req, res){
               const options = {expiresIn: 2592000};
               jwt.sign(
               payload,
-              secretOrKey,
+              key.secretOrKey,
               options,
               (err, token) => {
                   if(err){

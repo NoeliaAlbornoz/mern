@@ -3,6 +3,9 @@
 const mongoose = require('mongoose');
 const app = require('./app')
 const port = process.env.PORT || 5000;
+const passport = require('./passport')
+const express = require('express')
+const exp = express()
 
   mongoose.connect("mongodb+srv://nga:123@cluster1-9xrei.mongodb.net/test?retryWrites=true&w=majority").then(res =>{
     console.log("CONNECTED TO THE DATABASE");
@@ -14,12 +17,8 @@ const port = process.env.PORT || 5000;
 
   }).catch(err => {"ERROR CONNECTING TO DATABASE"});
 
-
-  
-  
-
-  
-
+//passport middleware
+exp.use(passport.initialize());
  
 
 
