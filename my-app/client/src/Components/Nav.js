@@ -13,7 +13,7 @@ class Navigation extends React.Component {
                         
                         <li className="nav-item"><Link to="/" className="nav-link color-link" >Home</Link></li>
                         <li className="nav-item"><Link to="/login" className="nav-link color-link" >Log in</Link></li>
-                        <li clasclassNames="nav-item"><Link to="/createAccount" className="nav-link color-link" >Create Account</Link></li>
+                        <li className="nav-item"><Link to="/createAccount" className="nav-link color-link" >Create Account</Link></li>
                         <li className="nav-item"><Link to="/cities" className="nav-link color-link" >Cities</Link></li>
                     </ul>
                 </nav>

@@ -1,6 +1,8 @@
 import React from 'react';
 import Avatar from '../Components/Avatar'; 
 import axios from 'axios';
+import {Route, Link, BrowserRouter as Router} from 'react-router-dom';
+import Paragraph from '../Components/Paragraph';
 
 class AccountForm extends React.Component {
     state = {
@@ -64,6 +66,8 @@ class AccountForm extends React.Component {
                                     <input type='name' className='form-control' name='lastname' placeholder='Last Name' value={this.state.lastname} onChange={this.handleChange}/>
                                 </div>
                                     <button type='submit'>Register</button>
+                                    <Paragraph mytext="After registering: "/>
+                                    <li><Link to="/login" className="color-link" >Log in</Link></li>
                             </form>
                         </div>
                     </div>

@@ -6,6 +6,8 @@ const itineraryControllers = require('../controllers/Itinerary');
 const activityControllers = require('../controllers/Activity');
 const userControllers = require ('../controllers/User');
 const api = express.Router();
+const jwt = require("jsonwebtoken");
+const key = require("../server");
 
 api.post('/city', cityControllers.saveCity);
 api.get('/city/:cityId', cityControllers.getCity);
@@ -29,8 +31,9 @@ api.delete('/activity/:activityId', activityControllers.deleteActivity);
 
 api.post('/user', userControllers.saveUser);
 api.get('/user/:userId', userControllers.getUser);
-api.get('/users/all', userControllers.getUsers);
+api.get('/users/all',  userControllers.getUsers);
 api.put('/user/:userId', userControllers.updateUser);
 api.delete('/user/:userId', userControllers.deleteUser);
+api.post('/user/login', userControllers.loginUser);
 
 module.exports = api;

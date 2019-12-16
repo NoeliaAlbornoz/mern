@@ -1,14 +1,14 @@
 import React from 'react';
 import Avatar from '../Components/Avatar'; 
+import Paragraph from '../Components/Paragraph';
 import axios from 'axios';
+import {Route, Link, BrowserRouter as Router} from 'react-router-dom';
 
 class AccountForm extends React.Component {
     state = {
         username: '',
         password: '',
-        email: '',
-        firstname: '',
-        lastname: ''
+        email: ''
     }
 
     handleChange = event => {
@@ -26,12 +26,10 @@ class AccountForm extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        axios.post(`/api/user`, {
+        axios.post(`/api/user/login`, {
             username: this.state.username,
             password: this.state.password,
-            email: this.state.email,
-            firstname: this.state.firstname,
-            lastname: this.state.lastname
+            email: this.state.email
         })
         .then(res => {
             console.log(res.data);
@@ -58,6 +56,8 @@ class AccountForm extends React.Component {
                                     <input type='email' className='form-control' name='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>
                                 </div>
                                     <button type='submit'>Log In</button>
+                                    <Paragraph mytext="Before log in: "/>
+                                    <li><Link to="/createAccount" className="color-link" >Create Account</Link></li>
                             </form>
                         </div>
                     </div>

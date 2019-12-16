@@ -12,9 +12,9 @@ class Activities extends React.Component {
         )
         return(
             <div>
-                <div id="demo" class="carousel slide" data-ride="carousel">
+                <div id="demo" className="carousel slide" data-ride="carousel">
   
-                    <ul class="carousel-indicators">
+                    <ul className="carousel-indicators">
                         <li data-target="#demo" data-slide-to="0" class="active"></li>
                         <li data-target="#demo" data-slide-to="1"></li>
                         <li data-target="#demo" data-slide-to="2"></li>
@@ -22,29 +22,29 @@ class Activities extends React.Component {
                         <li data-target="#demo" data-slide-to="4"></li>
                     </ul>
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
                             {list[0]}
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             {list[1]}
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             {list[2]}
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             {list[3]}
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             {list[4]}
                         </div>
                     </div>
 
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
+                    <a className="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span className="carousel-control-prev-icon"></span>
                     </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
+                    <a className="carousel-control-next" href="#demo" data-slide="next">
+                        <span className="carousel-control-next-icon"></span>
                     </a>
                 </div>
             </div>       

@@ -2,6 +2,9 @@
 
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
+const key = require('../server');
+const jwt = require("jsonwebtoken");
+const secretOrKey = "secret";
 
 function getUser(req, res){
     let userId = req.params.userId;
@@ -75,11 +78,53 @@ function deleteUser(req, res){
     })
 }
 
+function loginUser(req, res){
+
+  User.findOne({username: req.body.username})
+  .then((user)=> {
+      console.log(user)
+      if (user==null) {//if user don't exist
+          return res.status(500).send('Enter a valid username'); 
+      } else { //if user exists, compare pass with hash
+          if (bcrypt.compareSync(req.body.password, user.password)) { //if true
+              const payload = {
+                  id: user.id,
+                  username: user.username,
+              };
+              const options = {expiresIn: 2592000};
+              jwt.sign(
+              payload,
+              secretOrKey,
+              options,
+              (err, token) => {
+                  if(err){
+                   return res.json({
+                      success: false,
+                      token: "There was an error"
+                  });
+                  }else {
+                   return res.json({
+                      success: true,
+                      token: token
+                  });
+                  }
+              }
+              )
+          } else {
+              return res.status(400).send({message: "wrong password"}); 
+          }
+      }      
+  })
+  .catch((err) => { 
+  res.json(err).status(500)
+  }) 
+}  
+
 module.exports = {
     getUser,
     getUsers,
     saveUser,
     updateUser,
     deleteUser,
-    //loginUser
+    loginUser
 }

@@ -37,24 +37,24 @@ class Carousel extends React.Component {
                   <div className="carousel-item">
                     <div className="row">
                     <div className="col">
-                      <small class= "letter-img">Dubai<img src={dubai} className="rounded-circle mx-auto d-block carousel-img" alt="Dubai"/><br/></small>
-                      <img src={bsas} className="rounded-circle mx-auto d-block carousel-img" alt="Buenos Aires"/><small class= "letter-img">Buenos Aires</small>
+                      <small className= "letter-img">Dubai<img src={dubai} className="rounded-circle mx-auto d-block carousel-img" alt="Dubai"/><br/></small>
+                      <img src={bsas} className="rounded-circle mx-auto d-block carousel-img" alt="Buenos Aires"/><small className= "letter-img">Buenos Aires</small>
                       </div>
                       <div className="col">
-                      <small class= "letter-img">Tokio<img src={tokio} className="rounded-circle mx-auto d-block carousel-img" alt="Tokio"/><br/></small>
-                      <img src={sydney} className="rounded-circle mx-auto d-block carousel-img" alt="Sydney"/><small class= "letter-img">Sidney</small>
+                      <small className= "letter-img">Tokio<img src={tokio} className="rounded-circle mx-auto d-block carousel-img" alt="Tokio"/><br/></small>
+                      <img src={sydney} className="rounded-circle mx-auto d-block carousel-img" alt="Sydney"/><small className= "letter-img">Sidney</small>
                       </div>
               </div>
                   </div>
                   <div className="carousel-item">
                     <div className="row">
                     <div className="col">
-                      <small class= "letter-img">Cancún<img src={cancun} className="rounded-circle mx-auto d-block carousel-img" alt="Cancun"/><br/></small>
+                      <small className= "letter-img">Cancún<img src={cancun} className="rounded-circle mx-auto d-block carousel-img" alt="Cancun"/><br/></small>
                       <img src={roma} className="rounded-circle mx-auto d-block carousel-img" alt="Roma"/><small class= "letter-img">Roma</small>
                       </div>
                       <div className="col">
-                      <small class= "letter-img">Moscú<img src={moscu} className="rounded-circle mx-auto d-block carousel-img" alt="Moscu"/><br/></small>
-                      <img src={toronto} className="rounded-circle mx-auto d-block carousel-img" alt="Toronto"/><small class= "letter-img">Toronto</small>
+                      <small className= "letter-img">Moscú<img src={moscu} className="rounded-circle mx-auto d-block carousel-img" alt="Moscu"/><br/></small>
+                      <img src={toronto} className="rounded-circle mx-auto d-block carousel-img" alt="Toronto"/><small className= "letter-img">Toronto</small>
                       </div>
                     </div>
                   </div>
