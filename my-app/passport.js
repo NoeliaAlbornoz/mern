@@ -3,7 +3,7 @@ const ExtractJwt = require("passport-jwt").ExtractJwt;
 const key = require('./config/config');
 const express = require('express');
 const api = express.Router();
-const passport = require ("passport")
+const passport = require ("passport");
 const User = require('./models/User');
 
 

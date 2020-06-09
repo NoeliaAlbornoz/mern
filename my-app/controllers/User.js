@@ -119,6 +119,45 @@ function loginUser(req, res){
   }) 
 }  
 
+ //login user data w google
+ //const userRedirect = (req, res) => {
+  //const payload = {
+      //id: req.user.id,
+      //username: req.user.username,
+      
+  //};
+  //const options = {expiresIn: 2592000};
+  
+  //jwt.sign(
+  //payload,
+  //key.secretOrKey,
+  //options,
+  //(err, token) => {
+      //if(err){
+       //return res.json({
+          //payload:payload,
+         // success: false,
+          //token: "There was an error",
+      //});
+      //}else {
+          // res.json({
+          // payload: payload,
+          // success: true,
+          // token: token});
+          // console.log(res)
+          //res.redirect(`http://localhost:3000/profile/${token}`) 
+     // }
+  //}
+  //)
+//};
+
+//const getUserGoogle = (req,res) =>{
+  //let userRequested = req.params._id;  
+  //User
+  //.findOne({_id:userRequested})
+  //.then((user)=>{res.json(user).status(204)}
+//)}; 
+
 module.exports = {
     getUser,
     getUsers,
@@ -126,4 +165,6 @@ module.exports = {
     updateUser,
     deleteUser,
     loginUser
+    //userRedirect,
+    //getUserGoogle
 }

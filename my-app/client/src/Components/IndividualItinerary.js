@@ -1,6 +1,7 @@
 import React from 'react';
 import Activities from '../Components/Activities';
 import Comments from '../Components/Comments';
+import megusta from './img/megusta.jpg';
 
 class IndividualItinerary extends React.Component {
     render(){
@@ -26,7 +27,10 @@ class IndividualItinerary extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="view"><a href= "#" data-toggle="collapse" data-target="#view">View Activities</a></div>
+                  <div className="view">
+                    <a href= "#" data-toggle="collapse" data-target="#view">View Activities</a>
+                    <button>Add to Favorites<img src={megusta} className= 'mr-3 mt-3 rounded-circle float-left avatar' alt="Icono"/></button>
+                  </div>
                   <div id="view" className="collapse">
                   
                       <Activities itinerary={this.props.itinerary} key={this.props.itinerary._id}/>

@@ -5,7 +5,9 @@ const UserSchema = new mongoose.Schema({
     password: String,
     email: String,
     firstname: String,
-    lastname: String
+    lastname: String,
+    //googleID: String,
+    //favorites: [{type: Schema.Types.ObjectId, ref: 'Favorites'}]
 });
 
 module.exports = mongoose.model('User', UserSchema);

@@ -3,6 +3,7 @@ import Avatar from '../Components/Avatar';
 import Paragraph from '../Components/Paragraph';
 import axios from 'axios';
 import {Route, Link, BrowserRouter as Router} from 'react-router-dom';
+import google from './img/google.png';
 
 class AccountForm extends React.Component {
     state = {
@@ -56,6 +57,7 @@ class AccountForm extends React.Component {
                                     <input type='email' className='form-control' name='email' placeholder='Email' value={this.state.email} onChange={this.handleChange}/>
                                 </div>
                                     <button type='submit'>Log In</button>
+                                    <button><img src={google} className= 'mr-3 mt-3 rounded-circle float-left avatar' alt="Icono"/><a  href="http://localhost:5000/auth/google">Login with Google</a></button>  
                                     <Paragraph mytext="Before log in: "/>
                                     <li><Link to="/createAccount" className="color-link" >Create Account</Link></li>
                             </form>

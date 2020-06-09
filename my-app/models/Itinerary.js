@@ -11,7 +11,9 @@ const ItinerarySchema = Schema({
     duration: {type: Number},
     cityId: {type: String},
     city: {type: Schema.Types.ObjectId, ref: 'City'},
-    activities: [{type: Schema.Types.ObjectId, ref: 'Activity'}]
+    activities: [{type: Schema.Types.ObjectId, ref: 'Activity'}],
+    favorite: {type: String},
+    comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}]
 });
 
 module.exports = mongoose.model('MyItinerary', ItinerarySchema);

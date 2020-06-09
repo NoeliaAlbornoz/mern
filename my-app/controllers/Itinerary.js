@@ -45,6 +45,7 @@ function saveItinerary(req, res){
     itinerary.cityId = req.body.cityId
     itinerary.city = req.body.city
     itinerary.activities = req.body.activities
+    itinerary.favorite = req.body.favorite
 
     itinerary.save((err, itineraryStored) => {
       if(err) return res.status(500).send({message: 'ERROR WHEN SAVING IN THE DATABASE ${err}'})
