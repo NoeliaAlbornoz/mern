@@ -10,17 +10,12 @@ _1- Abrimos nuestra terminal_
 
 _2 - Primero clonamos el repositorio ó lo descargamos_
 
-_3 - Navegar hasta carpeta client
+_3 - Nos movemos a la carpeta client (cd client)
 
-cd client
+-4 - Instalamos las dependencias
 
-_instalamos las dependencias_
-
-```
 npm install
-```
 
-_Corremos el entorno de desarrollo_
+-5 - Corremos el entorno
 
-```
 npm start
